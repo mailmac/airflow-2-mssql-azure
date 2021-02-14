@@ -1,1 +1,1 @@
-# airflow2-sql-azure
+# airflow-2-mssql-azure
