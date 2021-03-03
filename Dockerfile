@@ -28,10 +28,10 @@ UsageCount=1" >> /etc/odbcinst.ini
 RUN pip install apache-airflow[postgres,odbc,mssql]==${AIRFLOW_VERSION}
 
 COPY scripts/start-airflow.sh /start-airflow.sh
-COPY dags /airflow/dags/
+COPY dags /dags/
 
 EXPOSE 8080
 
 WORKDIR ${AIRFLOW_USER_HOME}
-
+RUN chmod +x start-airflow.sh
 ENTRYPOINT ["/start-airflow.sh"]
