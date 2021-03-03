@@ -33,5 +33,5 @@ COPY dags /dags/
 EXPOSE 8080
 
 WORKDIR ${AIRFLOW_USER_HOME}
-RUN chmod +x start-airflow.sh
+RUN chmod +x /start-airflow.sh
 ENTRYPOINT ["/start-airflow.sh"]
