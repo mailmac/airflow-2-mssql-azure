@@ -1,0 +1,1 @@
+docker run --name=airflow-2-mssql-azure -p:8080:8080 airflow-2-mssql-azure -e AIRFLOW_USER_USERNAME="admin" AIRFLOW_USER_FIRSTNAME="Tony" AIRFLOW_USER_LASTNAME="Stark"  AIRFLOW_USER_ROLE="Admin" AIRFLOW_USER_EMAIL="tonystark@superhero.org" AIRFLOW_USER_PASSWORD="12345" 
