@@ -17,7 +17,7 @@ default_args = {
 }
 
 dag = DAG(
-    'MS SQL test DAG', 
+    'mssql_test_dag', 
     default_args=default_args, 
     description = 'a simple dag with an MS SQL operator',
     schedule_interval=timedelta(days=1),
