@@ -27,6 +27,10 @@ UsageCount=1" >> /etc/odbcinst.ini
 
 RUN pip install apache-airflow[postgres,odbc,mssql]==${AIRFLOW_VERSION}
 
+COPY requirements.txt /tmp/
+RUN pip install --requirement /tmp/requirements.txt
+COPY . /tmp/
+
 COPY scripts/start-airflow.sh /start-airflow.sh
 COPY dags/ ${AIRFLOW_USER_HOME}/dags/
 
